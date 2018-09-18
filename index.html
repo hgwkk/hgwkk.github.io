@@ -12,17 +12,39 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+		function displayTime(){
+		//1.获取div元素
+		var timeDiv=document.getElementById("timeDiv");
+		//2.获取系统当前时间
+		var nowTime=new Date();
+		var strNowTime=nowTime.toLocaleString();
+		//3.将系统时间设置到div元素中
+		timeDiv.innerHTML=strNowTime;
+		}
+		//每隔1秒调用一次displayTime函数
+		function start(){
+		window.setInterval("displayTime()",1000)//单位是毫秒
+		}
+		</script>
 	</head>
-	<body id="top">
+	<body id="top" onload="start();">
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>我叫侯国威</strong>, 一名大四学生<br />
-					不要看不起应届生，我的潜力需要你来验证！<br />
+					<h1><strong>我叫侯国威</strong>
+					<br>手机号：18866870710</br>
+					</h1>
+					
 					</h1>
 				</div>
+	
+	
+	<!--  body onload:当整个html页面加载完成后执行此函数  -->
+	<div id="timeDiv"></div>
 			</header>
 
 		<!-- Main -->
@@ -463,6 +485,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
 
 	</body>
 </html>
