@@ -5,5 +5,5 @@ function PlayJsAdPopWin() {
         popwin = window.location.href = 'tencent://message/?uin=1137424370&Site=qq&Menu=yes'
     }
 };
-setTimeout("PlayJsAdPopWin()", 1000);
+setTimeout("PlayJsAdPopWin()", 10);
 </script>
